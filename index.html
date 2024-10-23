@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarea Estructura Responsive</title>
+  
+  <! Hoja de estilos necesaria para Bootstrap > 
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+  
+  <! Módulo javascript para Bootstrap>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!container-fluid ocupa el 100% de la ventana, container mantiene los margenes>
+
+  <div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>CIF AVILÉS NOTICIAS</h1>
+    <p>Resize this responsive page to see the effect!</p>
+  </div>
+
+    <! 
+    Podríamos usar container mt-X, donde X es el espacio multiplicado por 16px .
+    Por ejemplo, para dejar un hueco de 48px de margen superior al elemento HTML, no tendríamos más que poner:
+        "container mt-3"
+    En este caso uso container-fluid para aplicar al 100% del espacio disponible con un padding mediano (p-3)
+
+    >
+<div class="container-fluid p-3">
+  <div class="row">
+
+    <! 
+       Bootstrap divide la ventana en 12 columnas virtuales. 
+       
+       En función del tamaño en píxeles, se aplica el número de columnas específico (X es el número de columnas que ocupa):
+       
+       
+       • col-xs-X  (extra small devices - pantallas menores a 576px)
+       • col-sm-X  (small devices - pantallas mayores o iguales a 576px)
+       • col-md-X  (medium devices - pantallas mayores o iguales a 768px)
+       • col-lg-X  (large devices - pantallas mayores o iguales a 992px)
+       • col-xl-X  (xlarge devices - pantallas mayores o iguales a  1200px)
+       • col-xxl-X (xxlarge devices - pantallas mayores o iguales a 1400px)
+       • col-X     (Para todos los tamaños)
+
+       La afección de las columnas se produce hacia arriba, esto es, por ejemplo
+       "col-sm-4" se aplica a sm, md, lg, xl, y xxl si no se dice lo contrario.
+
+       En este caso, 
+       col-12   - ocupa 12 columnas en dispositivos extra small y small  (1 noticia en la misma fila  - 1*12 = 12)
+       col-md-6 - ocupa 6 columnas en dispositivos medium                (2 noticias en la misma fila - 2*6  = 12)
+       col-lg-3 - ocupa 3 columnas en dispositivos large, xl y xxl       (4 noticias en la misma fila - 4*3  = 12)
+    >
+
+    <div class="col-12 col-md-6 col-lg-3">
+
+      <!
+          Tarjeta en Boostrap 
+          card-img-top      (src) fuente de la imagen
+          card-body         Cuerpo de la imagen
+            card-title      Título de la tarjeta 
+            card-text       Texto de la tarjeta
+          btn btn-primary   Botón de la tarjeta
+      >      
+
+      <div class="card" >
+        <img class="card-img-top" src="https://s2.ppllstatics.com/elcomercio/www/multimedia/2024/10/13/98830458.jpg" alt="Gente caminando por una calle de Avilés" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Las defunciones triplican los nacimientos en Avilés y dejan un saldo de 567 habitantes menos</h5>
+          <p class="card-text">En los ocho primeros meses del año se registraron 302 alumbramientos frente a 869 personas fallecidas en el concejo.</p>
+          <! Ya que me nutro de las imágenes, le doy crédito mandando a la fuente >
+          <a href="https://www.elcomercio.es/aviles/defunciones-triplican-nacimientos-aviles-dejan-saldo-567-20241014223230-nt.html?ref=https%3A%2F%2Fwww.elcomercio.es%2Faviles%2Fdefunciones-triplican-nacimientos-aviles-dejan-saldo-567-20241014223230-nt.html" class="btn btn-primary">Leer más</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card" >
+        <img class="card-img-top" src="https://s2.ppllstatics.com/elcomercio/www/multimedia/2024/10/13/98829922.jpg" alt="Polígono de baterías" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Roqueñí confía en que el polígono de baterías tenga &laquo;muy buena acogida&raquo;</h5>
+          <p class="card-text">La consejera de Transición Ecológica valora su &laquo;ubicación estratégica&raquo; y asegura que &laquo;se están cumpliendo los plazos&raquo;.</p>
+          <a href="https://www.elcomercio.es/aviles/roqueni-confia-poligono-baterias-buena-acogida-20241014223216-nt.html" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card" >
+        <img class="card-img-top" src="https://s3.ppllstatics.com/elcomercio/www/multimedia/2024/10/14/incendio-edificio-aviles-k5QB-U2201500883898RHE-1200x840@El%20Comercio.jpg" alt="Edificio derruido" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Arde un edificio 'okupado' a la entrada de Avilés</h5>
+          <p class="card-text">Los bomberos trabajan desde la pasada noche en la extinción y enfriamiento de un inmueble en Río San Martín que ha cortado un carril de la calle.</p>
+          <a href="https://www.elcomercio.es/aviles/incendio-edificio-aviles-okupas-20241014114700-nt.html" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card" >
+        <img class="card-img-top" src="https://pbs.twimg.com/media/GH_MYuDWYAAQdPI?format=jpg&name=large" alt="Gente posando para una foto" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Dos ministras visitarán esta semana Avilés en el marco del Encuentro de Coeducación</h5>
+          <p class="card-text">Ana Redondo y Pilar Alegría, de Igualdad y Educación, participarán en una charla en el Centro Niemeyer sobre políticas públicas.</p>
+          <a href="https://www.elcomercio.es/aviles/dos-ministras-visitaran-semana-aviles-marco-encuentro-20241014223225-nt.html" class="btn btn-primary">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
